@@ -1,0 +1,11 @@
+{
+  "source_assets": {
+    "mpi_train": "/data/source/mpi_train.npz",
+    "mpi_val": "/data/source/mpi_val.npz",
+    "pw3d_train": "/data/source/pw3d_train.npz",
+    "pw3d_val": "/data/source/pw3d_val.npz"
+  },
+  "checkpoints": {
+    "public_graphmlp": "/data/checkpoints/243frame.pth"
+  }
+}

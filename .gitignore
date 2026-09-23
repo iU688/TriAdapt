@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+external/
+checkpoints/
+outputs/
+runtime/outputs/
+work/
+config/external_paths.json
+*.pth
+*.pt
+*.npz
+*.npy
+*.mat
+*.pkl
+.env

@@ -1,0 +1,11 @@
+# Validated locally on 2026-09-10; this does not assert a full training replay.
+# Install CUDA PyTorch separately as described in README for GPU training.
+torch==2.11.0
+torchvision==0.26.0
+numpy==1.26.4
+scipy==1.17.1
+timm==1.0.12
+einops==0.8.2
+tqdm==4.65.2
+h5py==3.16.0
+Pillow==12.2.0

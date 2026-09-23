@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript when publication metadata becomes available."
+title: "TriAdapt GraphMLP training and component ablations"
+type: software
+authors:
+  - family-names: Yang
+    given-names: Songmao
+  - family-names: Yue
+    given-names: Wenjing
+  - family-names: Chen
+    given-names: Zhi
+repository-code: "https://github.com/iU688/TriAdapt"
+version: "training-release-20260923"
+date-released: "2026-09-23"

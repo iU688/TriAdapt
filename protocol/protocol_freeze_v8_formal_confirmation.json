@@ -1,0 +1,77 @@
+{
+  "protocol_id": "triadapt_training_release_20260920",
+  "status": "locked_before_formal_training",
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "trained_arms": [
+    "full",
+    "m1_m2",
+    "m2_m3"
+  ],
+  "baseline_arm": "m2_frozen_no_retraining",
+  "output_root": "outputs/formal_v8",
+  "training_budget": {
+    "epochs_max": 30,
+    "samples_per_epoch": 100000,
+    "early_stop": 5,
+    "batch_size": 32,
+    "num_workers": 0
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.0002,
+    "weight_decay": 0.0001
+  },
+  "loss": {
+    "root_mpjpe": 1.0,
+    "aligned_bone": 0.5,
+    "smooth_pck": 0.05,
+    "m1_2d_smooth_l1_when_active": 1.0,
+    "active_residual_rms": 0.01
+  },
+  "source_assets": {
+    "mpi_train": {
+      "path": "data/synth/r3_mpi_weak_dual_train_s1_s6_seed42.npz",
+      "sha256": "A1DD2B9E4833394B83987C2A777A70631391A3B759D2F10DC5E954E379AE458B"
+    },
+    "mpi_val": {
+      "path": "data/synth/r3_mpi_weak_dual_val_s7_s8_seed1042.npz",
+      "sha256": "10E7C291FEDACFBDCC9D9F13A1EB164D38F25502E016AEA8B2F4BDC7FC028B2F"
+    },
+    "pw3d_train": {
+      "path": "data/3DPW/stage_next_train_lifting_h36m17_v2.npz",
+      "sha256": "4D03AD6713D41B4947FBF6394D9CC988A6EA25004650B456726A8E83372B5E32"
+    },
+    "pw3d_val": {
+      "path": "data/3DPW/stage_next_validation_lifting_h36m17_v2.npz",
+      "sha256": "4EA36B95B018628A2BEE590C198719004C2C1DF52EB5288302A0256ED0EA5E61"
+    }
+  },
+  "m2_checkpoints": {
+    "42": {
+      "path": "checkpoints/m2/seed42/best_ungated_s42.pth",
+      "sha256": "7F36A58761E84CDED62F9B1C4907AC4AE2085DD2A9081EF785D203F82D93D10A"
+    },
+    "123": {
+      "path": "checkpoints/m2/seed123/best_ungated_s123.pth",
+      "sha256": "33C7DD599833F9EF98035FD4F192B5170FC4A86E7CF52E25E1B3F7ABA0717BBC"
+    },
+    "2026": {
+      "path": "checkpoints/m2/seed2026/best_ungated_s2026.pth",
+      "sha256": "4F5402E0CB84A4CC0C42129E272A844E923FC74F82BC8CAAC318BC094B523A42"
+    }
+  },
+  "code_sha256": {
+    "train_source": "5EA61458C5BA5604F42A1DA1C305C7E0DE7EC41289693AF6CF31A8062CFAFE14",
+    "model": "AD56D3AD6463BEE0A57D4F821419F575E206E23E468AF23BC8AE0CC8F5B52F9D",
+    "corruptions": "96E52A9224C212AA2829E5DFB1C867767AC4B54CA6829EE287174FB4A03A32DE",
+    "pw3d_dataset": "912477F5F187C4F8271E4E809F1737F24BA391E68EB9B3848B44D6D821B5E4F1",
+    "mpi_dataset": "47C7001D90599ADC181DF23A231DFD9724002194AF2438AFF1CDD41956493803",
+    "paper_metrics": "5D0D1A961953DF4992C4DF04E00311763E0EB1133672A1583C32E714C6A2AC8F",
+    "source_losses": "1BB09445FA05151786C84EEC29FAF7208D15C4CD4F22F801BA389E87D808BC87",
+    "m2_checkpoint_loader": "9F708719BF333D064EFBE11C6D555AD7315E8B49A4BAFEF62EF2A565506CEED0"
+  }
+}

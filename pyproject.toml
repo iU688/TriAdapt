@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "triadapt-modules"
+version = "1.0.0"
+description = "Representation Aware Parameter Efficient Adaptation for Monocular 3D Human Pose Estimation"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.1"]
+license = {file = "LICENSE"}
+
+[tool.setuptools.packages.find]
+include = ["triadapt*"]
